@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://dk73ibeyiydb8"]
+
+[ext_resource type="PackedScene" uid="uid://f1ffxh0qjiko" path="res://Player.tscn" id="1_uu6xs"]
+[ext_resource type="PackedScene" uid="uid://d0d046xl5x01g" path="res://Platform.tscn" id="2_r0du0"]
+[ext_resource type="PackedScene" uid="uid://1gws1w1qiyou" path="res://scenes/TetrisPiece.tscn" id="3_r0du0"]
+[ext_resource type="Script" uid="uid://dsw0olyee1bp" path="res://TetrisSpawner.gd" id="4_cm0pq"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Platform" parent="." instance=ExtResource("2_r0du0")]
+position = Vector2(0, 607)
+
+[node name="Player" parent="." instance=ExtResource("1_uu6xs")]
+position = Vector2(508, 557)
+
+[node name="TetrisPiece" parent="." instance=ExtResource("3_r0du0")]
+position = Vector2(178, 504)
+
+[node name="TetrisSpawner" type="Node" parent="."]
+script = ExtResource("4_cm0pq")
