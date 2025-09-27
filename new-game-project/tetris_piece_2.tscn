@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://iwgxo4k0h8el"]
+
+[ext_resource type="Texture2D" uid="uid://2uhy7e4p4hfe" path="res://sprites/Block.png" id="1_78sv2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_riilj"]
+size = Vector2(31, 127)
+
+[node name="TetrisPiece 2" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+collision_layer = 15
+collision_mask = 15
+collision_priority = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_riilj")
+
+[node name="Block" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(1, -47)
+texture = ExtResource("1_78sv2")
+
+[node name="Block2" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(1, 48)
+texture = ExtResource("1_78sv2")
+
+[node name="Block3" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(1, 16)
+texture = ExtResource("1_78sv2")
+
+[node name="Block4" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(1, -15)
+texture = ExtResource("1_78sv2")

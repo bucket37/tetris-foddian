@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://dk73ibeyiydb8"]
+[gd_scene load_steps=8 format=3 uid="uid://dk73ibeyiydb8"]
 
 [ext_resource type="PackedScene" uid="uid://f1ffxh0qjiko" path="res://Player.tscn" id="1_uu6xs"]
 [ext_resource type="PackedScene" uid="uid://d0d046xl5x01g" path="res://Platform.tscn" id="2_r0du0"]
 [ext_resource type="PackedScene" uid="uid://1gws1w1qiyou" path="res://scenes/TetrisPiece.tscn" id="3_r0du0"]
 [ext_resource type="Script" uid="uid://dsw0olyee1bp" path="res://TetrisSpawner.gd" id="4_cm0pq"]
 [ext_resource type="Script" uid="uid://cawn263dpu8rk" path="res://Portal.gd" id="5_fos0i"]
+[ext_resource type="PackedScene" uid="uid://iwgxo4k0h8el" path="res://tetris_piece_2.tscn" id="6_3dxm6"]
+[ext_resource type="PackedScene" uid="uid://dh7tt4p1m2t0i" path="res://map.tscn" id="7_lgr22"]
 
 [node name="Main" type="Node2D"]
 
@@ -25,3 +27,10 @@ position = Vector2(429, 337)
 script = ExtResource("5_fos0i")
 
 [node name="Sprite2D" type="Sprite2D" parent="Portal"]
+
+[node name="TetrisPiece2" parent="." instance=ExtResource("6_3dxm6")]
+position = Vector2(178, 504)
+
+[node name="MAP" parent="." instance=ExtResource("7_lgr22")]
+position = Vector2(31286, -7082.9995)
+scale = Vector2(4.8317804, 4.1770897)
